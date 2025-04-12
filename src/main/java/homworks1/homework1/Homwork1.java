@@ -1,12 +1,32 @@
 package homworks1.homework1;
 
+import java.util.Scanner;
+
 public class Homwork1 {
     public static void main(String[] args) {
-        greetings();
-        checkSign( 2, 6 ,4);
-        selectColor();
-        compareNumbers();
-        addOrSubtractAndPrint(4, 8, true );
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите число от 1 до 5");
+        int a = scanner.nextInt();
+        if (a == 1) {
+            greetings();
+        }
+        if (a == 2) {
+            checkSign(2, 6, 4);
+        }
+        if (a == 3) {
+            selectColor();
+        }
+        if (a == 4) {
+            compareNumbers();
+        }
+        if (a == 5) {
+            addOrSubtractAndPrint(4, 8, true);
+        }
+        //  greetings();
+        // checkSign(2, 6, 4);
+        //  selectColor();
+        //  compareNumbers();
+        //  addOrSubtractAndPrint(4, 8, true);
 
     }
 
@@ -28,7 +48,7 @@ public class Homwork1 {
 
     public static void selectColor() {
         int data = 15;
-        if (data <= 10){
+        if (data <= 10) {
             System.out.println("Красный");
         } else if (data > 10 && data <= 20) {
             System.out.println("Желтый");
@@ -36,15 +56,17 @@ public class Homwork1 {
             System.out.println("Зеленый");
         }
     }
-    public static void  compareNumbers() {
+
+    public static void compareNumbers() {
         int a = 5;
         int b = 3;
-        if(a >= b) {
+        if (a >= b) {
             System.out.println("a >= b");
-        } else  {
+        } else {
             System.out.println("a < b");
         }
     }
+
     public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
         if (increment == true) {
             System.out.println(initValue + delta);
